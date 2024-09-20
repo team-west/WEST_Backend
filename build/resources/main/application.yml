@@ -24,9 +24,13 @@ spring:
   jackson:
     property-naming-strategy: SNAKE_CASE
 
+logging:
+  level:
+    com.example : debug
+
 jwt:
+  header: ${HEADER}
+  prefix: ${PREFIX}
   secret_key: ${SECRET_KEY}
   access_exp: ${ACCESS_EXP}
   refresh_exp: ${REFRESH_EXP}
-  header: ${HEADER}
-  prefix: ${PREFIX}

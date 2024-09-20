@@ -2,8 +2,8 @@ package com.example.west.global.security.jwt;
 
 import com.example.west.domain.auth.domain.RefreshToken;
 import com.example.west.domain.auth.domain.repository.RefreshTokenRepository;
-import com.example.west.global.exception.ExpiredTokenException;
 import com.example.west.domain.auth.presentation.dto.TokenResponse;
+import com.example.west.global.exception.ExpiredTokenException;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
