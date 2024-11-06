@@ -1,4 +1,4 @@
-package com.example.west.domain.auth.presentation.dto;
+package com.example.west.domain.auth.presentation.dto.response;
 
 import lombok.Builder;
 import lombok.Getter;

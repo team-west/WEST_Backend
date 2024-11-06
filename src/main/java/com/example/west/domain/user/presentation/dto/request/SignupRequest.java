@@ -1,6 +1,6 @@
-package com.example.west.domain.user.presentation.dto;
+package com.example.west.domain.user.presentation.dto.request;
 
-import com.example.west.domain.user.domain.type.Sex;
+import com.example.west.domain.user.domain.type.Gender;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -31,5 +31,5 @@ public class SignupRequest {
     private String password;
 
     @NotNull(message = "성별을 선택하세요.")
-    private Sex sex;
+    private Gender gender;
 }

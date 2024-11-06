@@ -1,4 +1,4 @@
-package com.example.west.domain.user.presentation.dto;
+package com.example.west.domain.user.presentation.dto.request;
 
 import lombok.AccessLevel;
 import lombok.Getter;

@@ -3,14 +3,14 @@ package com.example.west.domain.user.service;
 import com.example.west.domain.user.domain.User;
 import com.example.west.domain.user.domain.repository.UserRepository;
 import com.example.west.domain.user.exception.UserAlreadyExistException;
-import com.example.west.domain.user.presentation.dto.SignupRequest;
+import com.example.west.domain.user.presentation.dto.request.SignupRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-@Service
 @RequiredArgsConstructor
+@Service
 public class SignupService {
 
     private final UserRepository userRepository;
@@ -31,7 +31,7 @@ public class SignupService {
                         .name(signupRequest.getName())
                         .number(signupRequest.getNumber())
                         .password(password)
-                        .sex(signupRequest.getSex())
+                        .gender(signupRequest.getGender())
                         .build()
         );
     }

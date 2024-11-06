@@ -2,7 +2,7 @@ package com.example.west.global.security.jwt;
 
 import com.example.west.global.exception.ExpiredTokenException;
 import com.example.west.global.exception.InvalidTokenException;
-import com.example.west.domain.auth.presentation.dto.TokenResponse;
+import com.example.west.domain.auth.presentation.dto.response.TokenResponse;
 import com.example.west.global.security.auth.AuthDetailsService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
