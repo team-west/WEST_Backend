@@ -1,8 +1,8 @@
 package com.example.west.domain.user.presentation;
 
-import com.example.west.domain.auth.presentation.dto.TokenResponse;
-import com.example.west.domain.user.presentation.dto.LoginRequest;
-import com.example.west.domain.user.presentation.dto.SignupRequest;
+import com.example.west.domain.auth.presentation.dto.response.TokenResponse;
+import com.example.west.domain.user.presentation.dto.request.LoginRequest;
+import com.example.west.domain.user.presentation.dto.request.SignupRequest;
 import com.example.west.domain.user.service.LoginService;
 import com.example.west.domain.user.service.ReissueService;
 import com.example.west.domain.user.service.SignupService;
@@ -14,9 +14,9 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 @Validated
-@RestController
 @RequiredArgsConstructor
 @RequestMapping("/user")
+@RestController
 public class UserController {
 
     private final SignupService signupService;
@@ -29,8 +29,8 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public TokenResponse login(@RequestBody @Valid LoginRequest request) {
-        return loginService.login(request);
+    public TokenResponse login(@RequestBody @Valid LoginRequest loginRequest) {
+        return loginService.login(loginRequest);
     }
 
     @PutMapping("/reissue")
