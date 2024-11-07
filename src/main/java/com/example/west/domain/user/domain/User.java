@@ -19,7 +19,6 @@ public class User {
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
-    @ColumnDefault("random_uuid()")
     private UUID id;
 
     @Column(name = "user_name", columnDefinition = "varchar(10)", nullable = false)
@@ -27,8 +26,7 @@ public class User {
 
     @Column(name = "user_number", columnDefinition = "varchar(20)", nullable = false)
     private String number;
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     @Column(name = "account_id", columnDefinition = "varchar(30)", nullable = false)
     private String accountId;
 
