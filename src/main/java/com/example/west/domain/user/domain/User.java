@@ -5,7 +5,6 @@ import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -19,10 +18,6 @@ public class User {
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
-<<<<<<< HEAD
-=======
-    @ColumnDefault("random_uuid()")
->>>>>>> origin/main
     private UUID id;
 
     @Column(name = "user_name", columnDefinition = "varchar(10)", nullable = false)
@@ -30,12 +25,7 @@ public class User {
 
     @Column(name = "user_number", columnDefinition = "varchar(20)", nullable = false)
     private String number;
-<<<<<<< HEAD
 
-=======
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
->>>>>>> origin/main
     @Column(name = "account_id", columnDefinition = "varchar(30)", nullable = false)
     private String accountId;
 
