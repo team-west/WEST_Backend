@@ -18,10 +18,6 @@ public class SignupService {
 
     @Transactional
     public void signUp(SignupRequest signupRequest) {
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main
         if (userRepository.existsByAccountId(signupRequest.getAccountId())) {
             throw UserAlreadyExistException.EXCEPTION;
         }
