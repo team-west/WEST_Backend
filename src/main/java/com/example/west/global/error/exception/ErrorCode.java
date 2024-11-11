@@ -24,6 +24,9 @@ public enum ErrorCode {
     //style
     STYLE_NOT_FOUND(404, "Style not found"),
 
+    //styleFavorite
+    STYLE_FAVORITE_NOT_FOUND(404, "Style favorite not found"),
+
     //general
     BAD_REQUEST(400, "Bad request"),
     //잘못된 요청으로써 문법상 오류가 있어서 서버가 요청사항을 이해하지 못하는 경우
