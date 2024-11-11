@@ -13,7 +13,6 @@ import org.springframework.transaction.annotation.Transactional;
 @RequiredArgsConstructor
 @Service
 public class AddStyleFavoriteService {
-
     private final StyleFavoriteRepository styleFavoriteRepository;
     private final StyleService styleService;
     private final UserFacade userFacade;

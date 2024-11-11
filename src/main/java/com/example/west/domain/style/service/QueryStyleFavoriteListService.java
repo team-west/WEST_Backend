@@ -14,7 +14,6 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 @Service
 public class QueryStyleFavoriteListService {
-
     private final StyleFavoriteRepository styleFavoriteRepository;
     private final StyleService styleService;
     private final UserFacade userFacade;
