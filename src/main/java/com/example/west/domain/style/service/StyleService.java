@@ -2,6 +2,7 @@ package com.example.west.domain.style.service;
 
 import com.example.west.domain.style.domain.Style;
 import com.example.west.domain.style.domain.repository.StyleRepository;
+import com.example.west.domain.style.exception.StyleNotFoundException;
 import com.example.west.domain.user.domain.User;
 import com.example.west.domain.user.domain.type.Gender;
 import com.example.west.domain.user.facade.UserFacade;
@@ -17,7 +18,7 @@ public class StyleService {
 
     public Style getStyleByName(String styleName) {
         return styleRepository.findByName(styleName)
-                .orElseThrow(() -> new IllegalArgumentException("스타일을 찾을 수 없습니다.: " + styleName));
+                .orElseThrow(() -> StyleNotFoundException.EXCEPTION);
     }
 
     public String getStyleImageUrl(Style style) {
